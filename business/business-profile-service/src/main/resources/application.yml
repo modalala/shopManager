@@ -1,0 +1,37 @@
+base:
+  config:
+    nacos:
+      hostname: localhost:8848
+
+spring:
+  application:
+    name: business-profile
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${base.config.nacos.hostname}
+
+
+dubbo:
+  scan:
+    base-packages: com.fosu.shop.business.controller
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://${base.config.nacos.hostname}
+
+server:
+  port: 9002
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

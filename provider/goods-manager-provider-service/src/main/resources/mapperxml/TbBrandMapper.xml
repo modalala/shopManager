@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fosu.shop.provider.mapper.TbBrandMapper">
+  <resultMap id="BaseResultMap" type="com.fosu.shop.provider.domain.TbBrand">
+    <!--@mbg.generated generated on Sat Sep 07 16:54:48 CST 2019.-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="first_char" jdbcType="VARCHAR" property="firstChar" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sat Sep 07 16:54:48 CST 2019.-->
+    id, `name`, first_char
+  </sql>
+</mapper>

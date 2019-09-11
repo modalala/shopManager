@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/business/business.iml" filepath="$PROJECT_DIR$/business/business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/business-profile-feign/business-profile-feign.iml" filepath="$PROJECT_DIR$/business/business-profile-feign/business-profile-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/business-profile-service/business-profile-service.iml" filepath="$PROJECT_DIR$/business/business-profile-service/business-profile-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons/commons-dto/commons-dto.iml" filepath="$PROJECT_DIR$/commons/commons-dto/commons-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons/commons-utils/commons-utils.iml" filepath="$PROJECT_DIR$/commons/commons-utils/commons-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dependencies/dependencies.iml" filepath="$PROJECT_DIR$/dependencies/dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider/goods-manager-provider-api/goods-manager-provider-api.iml" filepath="$PROJECT_DIR$/provider/goods-manager-provider-api/goods-manager-provider-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider/goods-manager-provider-service/goods-manager-provider-service.iml" filepath="$PROJECT_DIR$/provider/goods-manager-provider-service/goods-manager-provider-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-alibaba-school.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-alibaba-school.iml" />
+    </modules>
+  </component>
+</project>

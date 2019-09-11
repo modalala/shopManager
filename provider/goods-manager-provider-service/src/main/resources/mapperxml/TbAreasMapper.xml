@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fosu.shop.provider.mapper.TbAreasMapper">
+  <resultMap id="BaseResultMap" type="com.fosu.shop.provider.domain.TbAreas">
+    <!--@mbg.generated generated on Sat Sep 07 16:54:48 CST 2019.-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="areaid" jdbcType="VARCHAR" property="areaid" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="cityid" jdbcType="VARCHAR" property="cityid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sat Sep 07 16:54:48 CST 2019.-->
+    id, areaid, area, cityid
+  </sql>
+</mapper>
