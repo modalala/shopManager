@@ -35,8 +35,6 @@ public class SpecsServiceImpl implements SpecsService {
     @Override
     public PageInfo<TbSpecification> getLikeSpecs(Integer pageNum, Integer pageSize, String selectName) {
         PageHelper.startPage(pageNum,pageSize);
-        //Example example = new Example(TbSpecification.class);
-        //example.createCriteria().andLike("specName","%"+selectName+"%");
 
         PageInfo<TbSpecification> pageInfo = new PageInfo<>(tbSpecificationMapper.specsQueryPage(selectName));
 

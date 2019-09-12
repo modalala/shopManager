@@ -4,6 +4,8 @@ import com.fosu.shop.business.dto.ContentFileName;
 import com.fosu.shop.provider.api.ContentService;
 import com.fosu.shop.provider.domain.TbBrand;
 import com.fosu.shop.provider.domain.TbContent;
+import com.fosu.shop.provider.domain.TbContentCategory;
+import com.fosu.shop.provider.mapper.TbContentCategoryMapper;
 import com.fosu.shop.provider.mapper.TbContentMapper;
 import com.fosu.shop.provider.utils.FileNameUtils;
 import org.apache.dubbo.common.Version;
@@ -24,6 +26,9 @@ public class ContentServiceImpl implements ContentService {
 
     @Resource
     private TbContentMapper tbContentMapper;
+
+    @Resource
+    private TbContentCategoryMapper categoryMapper;
 
     @Override
     public Integer postContent(TbContent tbContent, ContentFileName contentFileName) {
@@ -105,6 +110,13 @@ public class ContentServiceImpl implements ContentService {
         example.createCriteria().andEqualTo("id",tbContent.getId());
         final Integer num = tbContentMapper.updateByExample(tbContent, example);
         return num;
+    }
+
+    @Override
+    public List<TbContentCategory> getAllContentCategory() {
+
+        final List<TbContentCategory> list = categoryMapper.selectAll();
+        return list;
     }
 }
 

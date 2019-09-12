@@ -2,6 +2,7 @@ package com.fosu.shop.provider.api;
 
 import com.fosu.shop.business.dto.ContentFileName;
 import com.fosu.shop.provider.domain.TbContent;
+import com.fosu.shop.provider.domain.TbContentCategory;
 
 import java.util.List;
 
@@ -37,4 +38,10 @@ public interface ContentService {
      * @return
      */
     Integer fixContent(TbContent tbContent);
+
+    /**
+     * 查询广告分类信息
+     * @return
+     */
+    List<TbContentCategory> getAllContentCategory();
 }

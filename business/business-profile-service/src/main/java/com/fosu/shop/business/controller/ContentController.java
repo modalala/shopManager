@@ -6,6 +6,7 @@ import com.fosu.shop.business.dto.ContentFileName;
 import com.fosu.shop.business.dto.ContentParam;
 import com.fosu.shop.provider.api.ContentService;
 import com.fosu.shop.provider.domain.TbContent;
+import com.fosu.shop.provider.domain.TbContentCategory;
 import io.swagger.annotations.ApiOperation;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.*;
@@ -92,5 +93,12 @@ public class ContentController {
             return new ResponseResultMe<>(ResponseResultMe.CodeStatus.OK,"修改成功");
         }
         return new ResponseResultMe<>(ResponseResultMe.CodeStatus.FAIL,"修改失败");
+    }
+
+    @GetMapping("/getContentCategory")
+    @ApiOperation(value = "广告分类获取")
+    ResponseResultMe<List<TbContentCategory>> getCategory(){
+        final List<TbContentCategory> categoryList = contentService.getAllContentCategory();
+        return new ResponseResultMe<>(ResponseResultMe.CodeStatus.OK,"广告分类获取成功",categoryList);
     }
 }

@@ -13,4 +13,12 @@
     <!--@mbg.generated generated on Sat Sep 07 16:54:48 CST 2019.-->
     id, `name`, spec_ids, brand_ids, custom_attribute_items
   </sql>
+  <select id="typeQueryPage" resultMap="BaseResultMap" parameterType="String">
+    select * from tb_type_template
+    <where>
+      <if test="_parameter !=null and _parameter !=''">
+        and name like concat('%',#{selectName}, '%')
+      </if>
+    </where>
+  </select>
 </mapper>
