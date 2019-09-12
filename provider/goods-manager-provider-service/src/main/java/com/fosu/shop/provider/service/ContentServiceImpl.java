@@ -49,6 +49,7 @@ public class ContentServiceImpl implements ContentService {
             //已经随机过的文件名字
             String pathName = localPath + "/" + FileNameUtils.getFileName(contentFileName.getOriginalFilename());
 
+            //文件 输出流   缓冲区   写入
             file = new File(pathName);
             fos = new FileOutputStream(file);
             bos = new BufferedOutputStream(fos);
