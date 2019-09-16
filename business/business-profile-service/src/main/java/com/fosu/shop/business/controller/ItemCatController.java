@@ -95,6 +95,8 @@ public class ItemCatController {
      * @param tbItemCat
      * @return
      */
+    @PostMapping("fixItemCat")
+    @ApiOperation(value = "分类修改" )
     ResponseResultMe<Integer> fixItemCat(TbItemCat tbItemCat){
         Integer num = itemCatService.fixItemCat(tbItemCat);
         if(num != 0)

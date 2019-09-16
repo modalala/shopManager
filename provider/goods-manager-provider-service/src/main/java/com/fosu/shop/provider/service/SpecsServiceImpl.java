@@ -81,7 +81,7 @@ public class SpecsServiceImpl implements SpecsService {
         specsId.forEach((e)->{
             //把级联的删除了
             Example example = new Example(TbSpecificationOption.class);
-            example.createCriteria().andEqualTo("specId","e");
+            example.createCriteria().andEqualTo("specId",e);
             optionMapper.deleteByExample(example);
             //删除总的
             int i = tbSpecificationMapper.deleteByPrimaryKey(e);
